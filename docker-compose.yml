@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+  teacher-rate-300-python:
+    build: ./
+    image: teacher-rate-300-python:latest
+    environment:
+      - CONFIG_TIME_1578790800=0
+      - DELAY_TIME=1
+      - DELAY_SCHEDUEL=604800
+      - VENDOR_ID=3671580
+      - DB_URL_EXTRACT=mysql://root:1qazXSW@2019@sp1.dev.native.vn:3306/topicalms?charset=utf8&use_unicode=True
+      - DB_URL_LOAD=
+    networks:
+      nvn_net:
+networks:
+  nvn_net:
+
